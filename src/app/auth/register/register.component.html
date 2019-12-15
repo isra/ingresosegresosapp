@@ -6,10 +6,20 @@
       <div class="col-lg-4 mx-auto">
         <h2 class="text-center mb-4">Registro</h2>
         <div class="auto-form-wrapper">
-          <form action="#">
+          <form
+            (ngSubmit)="onSubmitRegister(frmRegister.value)"
+            #frmRegister="ngForm"
+          >
             <div class="form-group">
               <div class="input-group">
-                <input type="email" class="form-control" placeholder="Correo" />
+                <input
+                  ngModel
+                  name="email"
+                  type="email"
+                  class="form-control"
+                  placeholder="Correo"
+                  required
+                />
                 <div class="input-group-append">
                   <span class="input-group-text">
                     <i class="fa fa-check-circle"></i>
@@ -20,9 +30,29 @@
             <div class="form-group">
               <div class="input-group">
                 <input
+                  ngModel
+                  name="usuario"
+                  type="text"
+                  class="form-control"
+                  placeholder="Usuario"
+                  required
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fa fa-check-circle"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  ngModel
+                  name="password"
                   type="password"
                   class="form-control"
                   placeholder="Password"
+                  required
                 />
                 <div class="input-group-append">
                   <span class="input-group-text">
@@ -33,7 +63,10 @@
             </div>
 
             <div class="form-group">
-              <button class="btn btn-primary submit-btn btn-block">
+              <button
+                [disabled]="frmRegister.invalid"
+                class="btn btn-primary submit-btn btn-block"
+              >
                 Crear cuenta
               </button>
             </div>
