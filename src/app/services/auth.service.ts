@@ -7,8 +7,8 @@ import Swal from "sweetalert2";
 
 import { Store } from "@ngrx/store";
 import { AppState } from "../app.reducer";
-import * as fromUI from "../shared/ui.actions";
-import * as fromAuth from "./auth.actions";
+import * as fromUI from "../actions/ui.actions";
+import * as fromAuth from "../actions/auth.actions";
 
 import { User } from "../model/user.model";
 
@@ -22,6 +22,7 @@ import { map } from "rxjs/operators";
 })
 export class AuthService {
   userSubscription: Subscription = new Subscription();
+  user: User;
 
   constructor(
     private store: Store<AppState>,
@@ -38,10 +39,12 @@ export class AuthService {
           .valueChanges()
           .subscribe((valuesChange: any) => {
             const userObj = new User(valuesChange);
+            this.user = userObj;
             this.store.dispatch(new fromAuth.SetUserAction(userObj));
           });
       } else {
         this.userSubscription.unsubscribe();
+        this.user = null;
       }
     });
   }
@@ -93,6 +96,7 @@ export class AuthService {
   }
 
   logout(): void {
+    this.store.dispatch(new fromAuth.UnsetUserAction());
     this.afAuth.auth
       .signOut()
       .then(response => {
@@ -112,5 +116,14 @@ export class AuthService {
         return userAuth !== null;
       })
     );
+  }
+
+  getUser(): User {
+    if (this.user) {
+      return {
+        ...this.user
+      };
+    }
+    return null;
   }
 }

@@ -3,7 +3,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { AppState } from "../../app.reducer";
 
-import { AuthService } from "../auth.service";
+import { AuthService } from "../../services/auth.service";
 import { Subscription } from "rxjs";
 
 @Component({

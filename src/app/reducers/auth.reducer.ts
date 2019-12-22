@@ -1,4 +1,4 @@
-import * as fromAuth from "./auth.actions";
+import * as fromAuth from "../actions/auth.actions";
 import { User } from "../model/user.model";
 
 export interface AuthState {
@@ -19,6 +19,10 @@ export function authReducer(
         user: {
           ...action.user
         }
+      };
+    case fromAuth.UNSET_USER:
+      return {
+        user: null
       };
     default:
       return state;
