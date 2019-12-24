@@ -5,7 +5,7 @@ import { AppState } from "../../app.reducer";
 import { Subscription } from "rxjs";
 
 import { IngresoEgresoModel } from "../../model/ingresoegreso.model";
-import { IngresoEngresoService } from "../../services/ingreso-engreso.service";
+import { IngresoEngresoService } from "../ingreso-engreso.service";
 
 import Swal from "sweetalert2";
 

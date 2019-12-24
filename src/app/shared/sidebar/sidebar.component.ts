@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { AuthService } from "../../services/auth.service";
+import { AuthService } from "../../auth/auth.service";
 
 import { Store } from "@ngrx/store";
 import { AppState } from "../../app.reducer";
-import * as fromAuth from "../../actions/auth.actions";
+import * as fromAuth from "../../auth/auth.actions";
 
 import { filter } from "rxjs/operators";
 import { Subscription } from "rxjs";
-import { IngresoEngresoService } from "../../services/ingreso-engreso.service";
+import { IngresoEngresoService } from "../../ingreso-egreso/ingreso-engreso.service";
 
 @Component({
   selector: "app-sidebar",

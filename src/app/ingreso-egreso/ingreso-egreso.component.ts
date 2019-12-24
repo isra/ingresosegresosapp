@@ -4,10 +4,10 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 // Redux
 import { Store } from "@ngrx/store";
 import { AppState } from "../app.reducer";
-import * as fromUI from "../actions/ui.actions";
+import * as fromUI from "../shared/ui.actions";
 
 import { IngresoEgresoModel } from "../model/ingresoegreso.model";
-import { IngresoEngresoService } from "../services/ingreso-engreso.service";
+import { IngresoEngresoService } from "./ingreso-engreso.service";
 
 import Swal from "sweetalert2";
 import { Subscription } from "rxjs";

@@ -1,4 +1,4 @@
-import * as fromIngresosEgresos from "../actions/ingresosegresos.actions";
+import * as fromIngresosEgresos from "./ingresosegresos.actions";
 import { IngresoEgresoModel } from "../model/ingresoegreso.model";
 import { InitialState } from "@ngrx/store/src/models";
 

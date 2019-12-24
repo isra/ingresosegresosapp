@@ -1,4 +1,4 @@
-import * as fromUI from "../actions/ui.actions";
+import * as fromUI from "./ui.actions";
 
 export interface IState {
   isLoading: boolean;

@@ -1,4 +1,4 @@
-import * as fromAuth from "../actions/auth.actions";
+import * as fromAuth from "./auth.actions";
 import { User } from "../model/user.model";
 
 export interface AuthState {

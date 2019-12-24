@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { IngresoEngresoService } from "../services/ingreso-engreso.service";
+import { IngresoEngresoService } from "../ingreso-egreso/ingreso-engreso.service";
 
 @Component({
   selector: "app-dashboard",

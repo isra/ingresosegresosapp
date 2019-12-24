@@ -7,8 +7,8 @@ import Swal from "sweetalert2";
 
 import { Store } from "@ngrx/store";
 import { AppState } from "../app.reducer";
-import * as fromUI from "../actions/ui.actions";
-import * as fromAuth from "../actions/auth.actions";
+import * as fromUI from "../shared/ui.actions";
+import * as fromAuth from "./auth.actions";
 
 import { User } from "../model/user.model";
 

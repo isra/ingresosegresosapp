@@ -4,10 +4,10 @@ import { AngularFirestore } from "@angular/fire/firestore";
 // Redux
 import { Store } from "@ngrx/store";
 import { AppState } from "../app.reducer";
-import * as fromUI from "../actions/ui.actions";
-import * as fromIngresoEgreso from "../actions/ingresosegresos.actions";
+import * as fromUI from "../shared/ui.actions";
+import * as fromIngresoEgreso from "./ingresosegresos.actions";
 
-import { AuthService } from "./auth.service";
+import { AuthService } from "../auth/auth.service";
 import { IngresoEgresoModel } from "../model/ingresoegreso.model";
 
 import { Observable, Subscription } from "rxjs";
