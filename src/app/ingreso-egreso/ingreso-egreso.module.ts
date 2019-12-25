@@ -7,6 +7,10 @@ import { SharedModule } from "../shared/shared.module";
 import { ChartsModule } from "ng2-charts";
 import { DashboardRoutingModule } from "../dashboard/dashboard-routing.module";
 
+// Redux
+import { StoreModule } from "@ngrx/store";
+import { IngresosEgresosReducer } from "./ingresosegresos.reducer";
+
 // Components
 import { DetalleComponent } from "./detalle/detalle.component";
 import { EstadisticaComponent } from "./estadistica/estadistica.component";
@@ -29,7 +33,8 @@ import { OrderIngresoEgresoPipe } from "../pipes/order-ingreso-egreso.pipe";
     ReactiveFormsModule,
     DashboardRoutingModule,
     ChartsModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forFeature("ingresosegresos", IngresosEgresosReducer)
   ]
 })
 export class IngresoEgresoModule {}

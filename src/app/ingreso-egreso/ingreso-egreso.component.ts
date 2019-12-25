@@ -3,7 +3,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 // Redux
 import { Store } from "@ngrx/store";
-import { AppState } from "../app.reducer";
+// import { AppState } from "../app.reducer";
+import * as fromIngresosEgresos from "./ingresosegresos.reducer";
 import * as fromUI from "../shared/ui.actions";
 
 import { IngresoEgresoModel } from "./ingresoegreso.model";
@@ -25,7 +26,7 @@ export class IngresoEgresoComponent implements OnInit, OnDestroy {
   loadingSubscription: Subscription = new Subscription();
 
   constructor(
-    private store: Store<AppState>,
+    private store: Store<fromIngresosEgresos.AppState>,
     private ingresoEgresoService: IngresoEngresoService
   ) {}
 
