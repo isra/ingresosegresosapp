@@ -1,9 +1,11 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router";
 // Modules App
 import { SharedModule } from "../shared/shared.module";
 import { ChartsModule } from "ng2-charts";
+import { DashboardRoutingModule } from "../dashboard/dashboard-routing.module";
 
 // Components
 import { DetalleComponent } from "./detalle/detalle.component";
@@ -21,6 +23,13 @@ import { OrderIngresoEgresoPipe } from "../pipes/order-ingreso-egreso.pipe";
     IngresoEgresoComponent,
     OrderIngresoEgresoPipe
   ],
-  imports: [CommonModule, ReactiveFormsModule, ChartsModule, SharedModule]
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    DashboardRoutingModule,
+    ChartsModule,
+    SharedModule
+  ]
 })
 export class IngresoEgresoModule {}

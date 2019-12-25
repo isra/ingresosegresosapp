@@ -7,6 +7,7 @@ import { LoginComponent } from "./auth/login/login.component";
 
 import { dashboardRoutes } from "./dashboard/dashboard.routes";
 import { AuthGuard } from "./auth/auth.guard"; */
+import { AuthGuard } from "./auth/auth.guard";
 
 const routes: Routes = [
   {
@@ -23,6 +24,11 @@ const routes: Routes = [
     children: dashboardRoutes,
     canActivate: [AuthGuard]
   }, */
+  {
+    path: "",
+    loadChildren: "./ingreso-egreso/ingreso-egreso.module#IngresoEgresoModule",
+    canLoad: [AuthGuard]
+  },
   {
     path: "**",
     redirectTo: ""

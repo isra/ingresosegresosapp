@@ -12,12 +12,13 @@ import { AppReducers } from "./app.reducer";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 
+// Routing
 import { AppRoutingModule } from "./app-routing.module";
 
 // App Modules
 import { AuthModule } from "./auth/auth.module";
-// import { IngresoEgresoModule } from "./ingreso-egreso/ingreso-egreso.module";
 
+// Components
 import { AppComponent } from "./app.component";
 
 @NgModule({
@@ -26,7 +27,6 @@ import { AppComponent } from "./app.component";
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     StoreModule.forRoot(AppReducers),
