@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 
-import { User } from "../model/user.model";
+import { User } from "./user.model";
 
 export const SET_USER = "[User] Set user";
 export const UNSET_USER = "[User] Unset user";

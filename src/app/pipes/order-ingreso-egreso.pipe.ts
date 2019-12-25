@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from "@angular/core";
-import { IngresoEgresoModel } from "../model/ingresoegreso.model";
+import { IngresoEgresoModel } from "../ingreso-egreso/ingresoegreso.model";
 
 @Pipe({
   name: "orderIngresoEgreso"

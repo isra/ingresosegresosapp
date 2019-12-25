@@ -1,5 +1,5 @@
 import * as fromIngresosEgresos from "./ingresosegresos.actions";
-import { IngresoEgresoModel } from "../model/ingresoegreso.model";
+import { IngresoEgresoModel } from "./ingresoegreso.model";
 import { InitialState } from "@ngrx/store/src/models";
 
 export interface IIngresosegresosState {

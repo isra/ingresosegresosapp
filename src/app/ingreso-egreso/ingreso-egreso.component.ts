@@ -6,7 +6,7 @@ import { Store } from "@ngrx/store";
 import { AppState } from "../app.reducer";
 import * as fromUI from "../shared/ui.actions";
 
-import { IngresoEgresoModel } from "../model/ingresoegreso.model";
+import { IngresoEgresoModel } from "./ingresoegreso.model";
 import { IngresoEngresoService } from "./ingreso-engreso.service";
 
 import Swal from "sweetalert2";

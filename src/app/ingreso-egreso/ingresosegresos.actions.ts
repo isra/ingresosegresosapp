@@ -1,5 +1,5 @@
 import { Action } from "@ngrx/store";
-import { IngresoEgresoModel } from "../model/ingresoegreso.model";
+import { IngresoEgresoModel } from "./ingresoegreso.model";
 
 export const SET_INGRESOS_EGRESOS = "[IngresosEgresos] Set ingresos egresos";
 export const UNSET_INGRESOS_EGRESOS =

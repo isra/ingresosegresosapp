@@ -10,7 +10,7 @@ import { AppState } from "../app.reducer";
 import * as fromUI from "../shared/ui.actions";
 import * as fromAuth from "./auth.actions";
 
-import { User } from "../model/user.model";
+import { User } from "./user.model";
 
 import * as fromFirebase from "firebase";
 

@@ -8,7 +8,7 @@ import * as fromUI from "../shared/ui.actions";
 import * as fromIngresoEgreso from "./ingresosegresos.actions";
 
 import { AuthService } from "../auth/auth.service";
-import { IngresoEgresoModel } from "../model/ingresoegreso.model";
+import { IngresoEgresoModel } from "./ingresoegreso.model";
 
 import { Observable, Subscription } from "rxjs";
 
